@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Operations List</h1>
+    
+    <div>
+    <input type="text" id="Addition1">
+    <p> + </p>
+    <input type="text" id="Addition2">
+    <button type=button onclick="add()">equals</button>  
+    <p class=line id="Addition3"></p>
+    </div>
+
+    <div>
+    <input type="text" id="Subtraction1">
+    <p> - </p>
+    <input type="text" id="Subtraction2">
+    <button type=button onclick="subtract()">equals</button>  
+    <p class=line id="Subtraction3"></p>
+    </div>
+    
+    <div>
+    <input type="text" id="Multiplication1">
+    <p> x </p>
+    <input type="text" id="Multiplication2">
+    <button type=button onclick="multiply()">equals</button>  
+    <p class=line id="Multiplication3"></p>
+    </div>
+
+    <div>
+    <input type="text" id="Division1">
+    <p> / </p>
+    <input type="text" id="Division2">
+    <button type=button onclick="divide()">equals</button>  
+    <p class=line id="Division3"></p>
+    </div>
+
+<script>
+    function add() {
+        let add1 = document.getElementById("Addition1").value;
+        let add2 = document.getElementById("Addition2").value;
+        let sum = parseInt(add1) + parseInt(add2);
+        document.getElementById("Addition3").innerHTML = sum;
+    }
+
+    function subtract() {
+        let sub1 = document.getElementById("Subtraction1").value;
+        let sub2 = document.getElementById("Subtraction2").value;
+        let diff = parseInt(sub1) - parseInt(sub2);
+        document.getElementById("Subtraction3").innerHTML = diff;
+    }
+
+    function multiply() {
+        let mul1 = document.getElementById("Multiplication1").value;
+        let mul2 = document.getElementById("Multiplication2").value;
+        let product = parseInt(mul1) * parseInt(mul2);
+        document.getElementById("Multiplication3").innerHTML = product;
+    }
+
+    function divide() {
+        let div1 = document.getElementById("Division1").value;
+        let div2 = document.getElementById("Division2").value;
+        let divide = parseInt(div1) / parseInt(div2);
+        document.getElementById("Division3").innerHTML = divide;
+    }
+
+
+</script>
+
+    
+</body>
+</html>
